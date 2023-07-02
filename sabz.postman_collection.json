@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "8105fc58-1865-4f98-a759-b58571bae4c1",
+		"name": "sabz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "consumption",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGEwNjBmMzMzZGU3Nzg4YzdjOGU1Y2MiLCJwaG9uZU51bWJlciI6Iis5ODkzNjYzOTA4NTIiLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTAxVDE3OjIyOjU5LjcwOVoiLCJkZXZpY2VJRCI6IjY0YTA2MTA4MzNkZTc3ODhjN2M4ZTVkMSIsInR5cGUiOiJOT0RFIiwiaWF0IjoxNjg4MzI5NTEzfQ.fi6g4K8wvR8NN88sQncvhg7ualYuc6sU8yYTb8fKqBU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGEwNjBmMzMzZGU3Nzg4YzdjOGU1Y2MiLCJwaG9uZU51bWJlciI6Iis5ODkzNjYzOTA4NTIiLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTAxVDE3OjIyOjU5LjcwOVoiLCJkZXZpY2VJRCI6IjY0YTA2MTA4MzNkZTc3ODhjN2M4ZTVkMSIsInR5cGUiOiJOT0RFIiwiaWF0IjoxNjg4MjMyMzgxfQ.g1RdOk0cFKXLLqSQaa-CJk-tBpXYrO0Mg502SdkgV80",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"nodeId\": \"64a0610833de7788c7c8e5d1\",\r\n            \"voltage\": 50,\r\n            \"consumption\": 80,\r\n            \"current\": 10,\r\n            \"THDi\": 20,\r\n            \"THDv\": 20\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://5.160.40.125:8080/consumption/mode-1",
+					"protocol": "http",
+					"host": [
+						"5",
+						"160",
+						"40",
+						"125"
+					],
+					"port": "8080",
+					"path": [
+						"consumption",
+						"mode-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "node token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGEwNjBmMzMzZGU3Nzg4YzdjOGU1Y2MiLCJwaG9uZU51bWJlciI6Iis5ODkzNjYzOTA4NTIiLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTAxVDE3OjIyOjU5LjcwOVoiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTY4ODMyNDUyN30.ReI4Pid-KMMSJ2w10sAu1trS8Oh348vbaKll5yHHV_c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://5.160.40.125:8080/nodes/64a0610833de7788c7c8e5d1/token",
+					"protocol": "http",
+					"host": [
+						"5",
+						"160",
+						"40",
+						"125"
+					],
+					"port": "8080",
+					"path": [
+						"nodes",
+						"64a0610833de7788c7c8e5d1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "latest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGEwNjBmMzMzZGU3Nzg4YzdjOGU1Y2MiLCJwaG9uZU51bWJlciI6Iis5ODkzNjYzOTA4NTIiLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTAxVDE3OjIyOjU5LjcwOVoiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTY4ODMyNDUyN30.ReI4Pid-KMMSJ2w10sAu1trS8Oh348vbaKll5yHHV_c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGEwNjBmMzMzZGU3Nzg4YzdjOGU1Y2MiLCJwaG9uZU51bWJlciI6Iis5ODkzNjYzOTA4NTIiLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTAxVDE3OjIyOjU5LjcwOVoiLCJkZXZpY2VJRCI6IjY0YTA2MTA4MzNkZTc3ODhjN2M4ZTVkMSIsInR5cGUiOiJOT0RFIiwiaWF0IjoxNjg4MzI5NzE4fQ.cqQ-EsmOq5CJ5Tal8zNk7A8EjD9HP8dsmLXXzsF2l5w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://5.160.40.125:8080/reports/latest/64a0610833de7788c7c8e5d1",
+					"protocol": "http",
+					"host": [
+						"5",
+						"160",
+						"40",
+						"125"
+					],
+					"port": "8080",
+					"path": [
+						"reports",
+						"latest",
+						"64a0610833de7788c7c8e5d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "summ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGEwNjBmMzMzZGU3Nzg4YzdjOGU1Y2MiLCJwaG9uZU51bWJlciI6Iis5ODkzNjYzOTA4NTIiLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTAxVDE3OjIyOjU5LjcwOVoiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTY4ODIzMjE3OX0.4_O70vxIXKGoeJwGzc0JEebZ_Tm7KV4-QM2xdw-4sgk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://5.160.40.125:8080/reports/sum?period=day",
+					"protocol": "http",
+					"host": [
+						"5",
+						"160",
+						"40",
+						"125"
+					],
+					"port": "8080",
+					"path": [
+						"reports",
+						"sum"
+					],
+					"query": [
+						{
+							"key": "period",
+							"value": "day"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "evg",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGEwNjBmMzMzZGU3Nzg4YzdjOGU1Y2MiLCJwaG9uZU51bWJlciI6Iis5ODkzNjYzOTA4NTIiLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTAxVDE3OjIyOjU5LjcwOVoiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTY4ODIzMjE3OX0.4_O70vxIXKGoeJwGzc0JEebZ_Tm7KV4-QM2xdw-4sgk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://5.160.40.125:8080/reports/average",
+					"protocol": "http",
+					"host": [
+						"5",
+						"160",
+						"40",
+						"125"
+					],
+					"port": "8080",
+					"path": [
+						"reports",
+						"average"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

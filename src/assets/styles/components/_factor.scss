@@ -1,0 +1,53 @@
+.factor {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        &-item {
+            display: flex;
+            margin-bottom: 20px;
+            span{
+                font-size: 15px;
+            }
+            .dots {
+                flex: 1;
+                overflow: hidden;
+                height: 20px;
+                margin: 0 5px;
+                vertical-align: top;
+                color: var(--grey-5);
+            }
+
+            .unit {
+                margin-right: 5px;
+            }
+
+            &.green {
+                span {
+                    font-size: 13px;
+                    color: var(--secondary-main );
+                }
+            }
+
+            &.sum {
+                justify-content: space-between;
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &__action {
+        display: flex;
+        margin-top: 15px;
+        .btn {
+            flex: 1;
+            &:first-child {
+                margin-left:10px;
+            }
+        }
+    }
+}
+

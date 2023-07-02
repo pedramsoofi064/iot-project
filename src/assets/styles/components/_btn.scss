@@ -1,0 +1,49 @@
+.btn {
+    height: 40px;
+    border-radius: 8px;
+    //styleName: Desktop/H5;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 0 15px;
+    background: none;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+        transform: scale(1.02);
+    }
+
+}
+
+.btn-fill {
+    text-align: center;
+    color: white;
+    background-color: var(--primary-main);
+    border-color: var(--primary-main);
+}
+
+.btn-outline {
+    color: var(--primary-main);
+    border-color: var(--primary-main);
+}
+.btn-pending {
+    color: var(--grey-6-middle);
+    border-color: var(--grey-6-middle);
+    pointer-events: none;
+}
+
+
+
+.v-btn {
+    border-radius: 12px !important;
+    &__content {
+        text-indent: 0% !important;
+        letter-spacing: 0 !important;
+        font-weight: 500;
+    }
+
+    &:disabled {
+        background-color: var(--primary-lightest);
+    }
+}

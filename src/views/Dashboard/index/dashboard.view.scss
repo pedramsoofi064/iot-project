@@ -1,0 +1,69 @@
+.dashboard-main {
+    &__shortcuts {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 10px;
+        margin-bottom: 50px;
+
+        &-item {
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 40px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 4px 4px 6px rgba(0, 0, 0, 0.15);
+            min-height: 153px;
+            .shortcuts-item__info {
+                display: flex;
+                align-items: center;
+
+                &-icon {
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 40px;
+                    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 4px 4px 6px rgba(0, 0, 0, 0.15);
+                    border-radius: 50%;
+
+                    svg {
+                        path {
+                            fill: var(--secondary-main);
+                        }
+                    }
+                }
+
+                &-text {
+                    margin-right: 15px;
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+
+
+            }
+
+            .shortcuts-item__value {
+                margin: 25px 0 15px;
+                font-weight: bold;
+                font-size: 32px;
+                color: var(--secondary-main);
+            }
+
+            &.badUsage {
+                box-shadow: 0px 0px 4px rgba(233, 4, 4, 0.4), 4px 4px 6px rgba(200, 16, 16, 0.15);
+
+                .shortcuts-item__info-icon {
+                    svg {
+                        path {
+                            fill: var(--cover-red-dark);
+                        }
+                    }
+                }
+                .shortcuts-item__value {
+                    color:  var(--cover-red-dark);
+                }
+            }
+        }
+    }
+
+    &__orders {}
+}

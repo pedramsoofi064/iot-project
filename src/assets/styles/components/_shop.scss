@@ -1,0 +1,46 @@
+.shop__info {
+    display: flex;
+    height: 70px;
+
+    &__icon {
+        width: 70px;
+        border-radius: 50%;
+        background-color: var(--cover-gray-ligth);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            path {
+                fill: var(--cover-gray-main);
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    &__name {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: black;
+    }
+
+    &__type {
+        font-size: 10px;
+        padding: 3px 5px;
+        background-color: var(--cover-gray-ligth);
+        color: var(--cover-gray-dark);
+        width: max-content;
+        margin-top: 5px;
+        border-radius: 6px;
+    }
+}

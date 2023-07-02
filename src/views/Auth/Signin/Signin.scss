@@ -1,0 +1,97 @@
+.signin {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    margin: 100px 50px 0;
+
+    .auth__title {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 45px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .main {
+        margin-top: 150px;
+
+        .form {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .form-field {
+                margin-left: 0;
+                width: 350px;
+
+                input {
+                    letter-spacing: 7px;
+                    text-align: center;
+                }
+
+                .resend {
+                    margin-top: 5px;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: var(--primary-main);
+                    cursor: pointer;
+
+                }
+            }
+
+        }
+
+        .form-action {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .v-btn {
+            width: 350px;
+
+            &:first-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        .text-1 {
+            //styleName: Desktop/Caption;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: var(--grey-6-middle);
+        }
+
+        .text-2 {
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: var(--primary-main);
+        }
+    }
+}

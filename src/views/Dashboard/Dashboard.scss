@@ -1,0 +1,30 @@
+@import '@/assets/styles/media';
+
+.dashboard {
+    height: 100%;
+    background-image: url(~@/assets/images/Pattern.png);
+
+    &__view {
+        padding: 50px 10% 0;
+
+        @include breakpoint('max-width:1200px') {
+            padding: 50px 5% 0;
+
+        }
+
+        display: flex;
+        position: relative;
+    }
+
+    &__main {
+        padding: 25px;
+        border-radius: 16px;
+        margin-right: 20px;
+        width: 100%;
+        position: relative;
+
+        backdrop-filter: saturate(150%) blur(5px);
+
+
+    }
+}
