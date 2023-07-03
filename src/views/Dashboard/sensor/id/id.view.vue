@@ -239,6 +239,9 @@ export default {
         const { data } = res;
         this.sumOption.xaxis.categories = [];
         this.sumSeries[0].data = [];
+        data.sort((a , b)=> {
+          return new Date(a.time) < new Date(b.time)
+        })
         data.forEach((item) => {
           this.sumOption.xaxis.categories.push(
             `${

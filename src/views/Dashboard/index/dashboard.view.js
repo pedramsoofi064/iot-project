@@ -41,41 +41,41 @@ export default {
             loadingSum: true,
             sumOption: {
                 chart: {
-                  id: "vuechart-example",
+                    id: "vuechart-example",
                 },
                 tooltip: {
-                  enabled: false,
+                    enabled: false,
                 },
                 xaxis: {
-                  categories: [],
-                  labels: {
-                    style: {
-                      colors: [],
-                      fontSize: "12px",
-                      fontFamily: "Helvetica, Arial, sans-serif",
-                      fontWeight: 400,
-                      cssClass: "apexcharts-xaxis-label",
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: [],
+                            fontSize: "12px",
+                            fontFamily: "Helvetica, Arial, sans-serif",
+                            fontWeight: 400,
+                            cssClass: "apexcharts-xaxis-label",
+                        },
                     },
-                  },
                 },
                 yaxis: {
-                  labels: {
-                    style: {
-                      colors: [],
-                      fontSize: "12px",
-                      fontFamily: "Helvetica, Arial, sans-serif",
-                      fontWeight: 400,
-                      cssClass: "apexcharts-xaxis-label",
+                    labels: {
+                        style: {
+                            colors: [],
+                            fontSize: "12px",
+                            fontFamily: "Helvetica, Arial, sans-serif",
+                            fontWeight: 400,
+                            cssClass: "apexcharts-xaxis-label",
+                        },
                     },
-                  },
                 },
-              },
-              sumSeries: [
+            },
+            sumSeries: [
                 {
-                  name: "series-1",
-                  data: [],
+                    name: "series-1",
+                    data: [],
                 },
-              ],
+            ],
         }
     },
     watch: {
@@ -133,6 +133,9 @@ export default {
                 const { data } = res;
                 this.sumOption.xaxis.categories = [];
                 this.sumSeries[0].data = [];
+                data.sort((a, b) => {
+                    return new Date(a.time) < new Date(b.time)
+                })
                 data.forEach((item) => {
                     this.sumOption.xaxis.categories.push(`${this.selectedPeriod !== 'hour' ? '' : new Date(item.time).toLocaleTimeString("fa-IR")} ${new Date(item.time).toLocaleDateString("fa-IR")}`);
                     this.sumOption.xaxis.labels.style.colors.push('white')
